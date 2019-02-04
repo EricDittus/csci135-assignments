@@ -3,6 +3,9 @@ using namespace std;
 int main() {
     int sum = 0;
     int s;
+    //declaration
+    //of
+    //integers
     while(cin >> s) {
       // While the reading operation is a success
 
