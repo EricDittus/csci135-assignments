@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+//included
+//namespace
 int main() {
     int sum = 0;
     int s;
