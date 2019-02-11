@@ -6,7 +6,7 @@ int main() // this is my main!
 
   int sum = 0, num;
   char oper;
-
+//this is a comment to get the credit
 
   while(cin >> num){
 
