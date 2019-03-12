@@ -20,7 +20,7 @@ while(getline(fin, strand)) {
   for(int i = 0; i < strand.length(); i++){
     if(strand[i] == 'a'||strand[i] == 'A'){
       strand.replace(i,1,u);
-    
+
     }
     if(strand[i] == 't'||strand[i] == 'T'){
       strand.replace(i,1,a);
@@ -30,8 +30,9 @@ while(getline(fin, strand)) {
       strand.replace(i,1,g);
       used = true;
     }
-    if(strand[i] == 'g'||strand[i] == 'G'){
-      if(used = false){
+    if(used = false){
+      if(strand[i] == 'g'||strand[i] == 'G'){
+
         strand.replace(i,1,c);
       }
     }
