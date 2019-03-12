@@ -12,17 +12,17 @@ if (fin.fail()) {
 std::string strand;
 while(getline(fin, strand)) {
   for(int i = 0; i < strand.length(); i++){
-    if(strand[i] = 'a'||strand[i] = 'A'){
-      strand[i] = 'U';
+    if(strand[i] == 'a'||strand[i] == 'A'){
+      strand[i] == 'U';
     }
-    if(strand[i] = 't'||strand[i] = 'T'){
-      strand[i] = 'A';
+    if(strand[i] == 't'||strand[i] == 'T'){
+      strand[i] == 'A';
     }
-    if(strand[i] = 'c'||strand[i] = 'C'){
-      strand[i] = 'G';
+    if(strand[i] == 'c'||strand[i] == 'C'){
+      strand[i] == 'G';
     }
-    if(strand[i] = 'g'||strand[i] = 'G'){
-      strand[i] = 'C';
+    if(strand[i] == 'g'||strand[i] == 'G'){
+      strand[i] == 'C';
     }
   }
   std::cout << strand << std::cout;
