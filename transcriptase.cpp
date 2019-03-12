@@ -20,11 +20,11 @@ while(getline(fin, strand)) {
   for(int i = 0; i < strand.length(); i++){
     if(strand[i] == 'a'||strand[i] == 'A'){
       strand.replace(i,1,u);
-      used = true;
+    
     }
     if(strand[i] == 't'||strand[i] == 'T'){
       strand.replace(i,1,a);
-      used = true;
+
     }
     if(strand[i] == 'c'||strand[i] == 'C'){
       strand.replace(i,1,g);
