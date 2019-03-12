@@ -31,8 +31,6 @@ while(getline(fin, strand)) {
   }
   std::cout << "\n";
 }
-
-}
 fin.close();
 
 return 0;
