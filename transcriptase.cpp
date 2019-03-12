@@ -1,9 +1,14 @@
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <cstdlib>
 #include <climits>
 int main()
 {
+  char u = 'U';
+  char a = 'A';
+  char g = 'G';
+  char c = 'C';
   std::ifstream fin("dna.txt");
 if (fin.fail()) {
     std::cerr << "File cannot be read, opened, or does not exist.\n";
@@ -13,16 +18,16 @@ std::string strand;
 while(getline(fin, strand)) {
   for(int i = 0; i < strand.length(); i++){
     if(strand[i] == 'a'||strand[i] == 'A'){
-      strand[i] == 'U';
+      strand.replace(i,1,u);
     }
     if(strand[i] == 't'||strand[i] == 'T'){
-      strand[i] == 'A';
+      strand.replace(i,1,a);
     }
     if(strand[i] == 'c'||strand[i] == 'C'){
-      strand[i] == 'G';
+      strand.replace(i,1,g);
     }
     if(strand[i] == 'g'||strand[i] == 'G'){
-      strand[i] == 'C';
+      strand.replace(i,1,c);
     }
   }
   std::cout << strand << std::endl;
