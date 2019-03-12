@@ -25,7 +25,7 @@ while(getline(fin, strand)) {
       strand[i] == 'C';
     }
   }
-  std::cout << strand << std::cout;
+  std::cout << strand << std::endl;
 }
 fin.close();
 
