@@ -1,14 +1,15 @@
 #include <iostream>
 #include <fstream>
-
+#include <cstdlib>
+#include <climits>
 int main()
 {
   std::ifstream fin("dna.txt");
 if (fin.fail()) {
-    cerr << "File cannot be read, opened, or does not exist.\n";
+    std::cerr << "File cannot be read, opened, or does not exist.\n";
     exit(1);
 }
-string strand;
+std::string strand;
 while(getline(fin, strand)) {
   for(int i = 0; i < strand.length(); i++){
     if(strand[i] = 'a'||strand[i] = 'A'){
