@@ -3,7 +3,7 @@
 
 int main()
 {
-  ifstream fin("dna.txt");
+  std::ifstream fin("dna.txt");
 if (fin.fail()) {
     cerr << "File cannot be read, opened, or does not exist.\n";
     exit(1);
