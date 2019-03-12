@@ -6,7 +6,7 @@
 int main()
 {
 
-  std::ifstream fin("dna.txt");
+  std::ifstream fin("dna.txt"); //opens file
 if (fin.fail()) {
     std::cerr << "File cannot be read, opened, or does not exist.\n";
     exit(1);
@@ -32,6 +32,6 @@ while(getline(fin, strand)) {//gets the line
   std::cout << "\n";//skips line
 }
 fin.close();
-
+//closes file
 return 0;
 }
