@@ -26,7 +26,7 @@ while(getline(fin, strand)) {
     if(strand[i] == 'c'||strand[i] == 'C'){
       strand.replace(i,1,g);
     }
-    if(strand[i] == 'g'||strand[i] == 'G' && strand[i] != 'C'){
+    if(strand[i] != 'C' && (strand[i] == 'g'||strand[i] == 'G')){
       strand.replace(i,1,c);
     }
   }
