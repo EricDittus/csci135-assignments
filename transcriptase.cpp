@@ -5,10 +5,10 @@
 #include <climits>
 int main()
 {
-  char u = 'U';
-  char a = 'A';
-  char g = 'G';
-  char c = 'C';
+  std::string u = "U";
+  std::string a = "A";
+  std::string g = "G";
+  std::string c = "C";
   std::ifstream fin("dna.txt");
 if (fin.fail()) {
     std::cerr << "File cannot be read, opened, or does not exist.\n";
