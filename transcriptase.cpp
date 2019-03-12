@@ -5,39 +5,31 @@
 #include <climits>
 int main()
 {
-  std::string u = "U";
-  std::string a = "A";
-  std::string g = "G";
-  std::string c = "C";
+
   std::ifstream fin("dna.txt");
 if (fin.fail()) {
     std::cerr << "File cannot be read, opened, or does not exist.\n";
     exit(1);
 }
 std::string strand;
-bool used = false;
+
 while(getline(fin, strand)) {
   for(int i = 0; i < strand.length(); i++){
     if(strand[i] == 'a'||strand[i] == 'A'){
-      strand.replace(i,1,u);
+      std::cout << 'U';
 
-    }
-    if(strand[i] == 't'||strand[i] == 'T'){
-      strand.replace(i,1,a);
+    }else if(strand[i] == 't'||strand[i] == 'T'){
+      std::cout << 'A';
 
+    }else if(strand[i] == 'c'||strand[i] == 'C'){
+      std::cout << 'G';
+    }else if(strand[i] == 'g'||strand[i] == 'G'){
+      std::cout << 'C';
+    }else{
+      std::cout << "\n";
     }
-    if(strand[i] == 'c'||strand[i] == 'C'){
-      strand.replace(i,1,g);
-      used = true;
-    }
-    if(used = false){
-      if(strand[i] == 'g'||strand[i] == 'G'){
-
-        strand.replace(i,1,c);
-      }
-    }
-    used = false;
   }
+}
   std::cout << strand << std::endl;
 }
 fin.close();
