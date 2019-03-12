@@ -15,6 +15,7 @@ if (fin.fail()) {
     exit(1);
 }
 std::string strand;
+bool used = false;
 while(getline(fin, strand)) {
   for(int i = 0; i < strand.length(); i++){
     if(strand[i] == 'a'||strand[i] == 'A'){
@@ -25,10 +26,14 @@ while(getline(fin, strand)) {
     }
     if(strand[i] == 'c'||strand[i] == 'C'){
       strand.replace(i,1,g);
+      used = true;
     }
-    if(strand[i] != 'C' && (strand[i] == 'g'||strand[i] == 'G')){
-      strand.replace(i,1,c);
+    if(strand[i] == 'g'||strand[i] == 'G'){
+      if(used = false){
+        strand.replace(i,1,c);
+      }
     }
+    used = false;
   }
   std::cout << strand << std::endl;
 }
