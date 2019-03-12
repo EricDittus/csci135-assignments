@@ -29,8 +29,9 @@ while(getline(fin, strand)) {
       std::cout << "\n";
     }
   }
+  std::cout << "\n";
 }
-  std::cout << strand << std::endl;
+
 }
 fin.close();
 
