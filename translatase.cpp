@@ -82,10 +82,10 @@ int main() {
         }
         //cout << position;
         int length = value_strand.length() - position;
-        string lineResult = strandOfvalues.substr(position, length-1);
+        string lineResult = value_strand.substr(position, length-1);
         //cout << len;
         cout << lineResult;
-        strandOfvalues = ""; //return back to empty
+        value_strand = ""; //return back to empty
         rna = ""; //returns to empty for next strand
       }
       fin.close();
