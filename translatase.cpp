@@ -4,7 +4,7 @@
 using namespace std;
 
 //look up the codon
-string dictionary_read(std::string codon) {
+string read(std::string codon) {
   string amino = "";
   string key, value;
   ifstream dict("codons.tsv");
@@ -62,7 +62,7 @@ int main() {
           letter = rna[i];
           codon += letter;
           if (codon.length() == 3) {
-            string convert = dictionary_read(codon);
+            string convert = read(codon);
             if (convert == "Stop") { //if codon converts to stop, next line
               break;
             }
